@@ -4,6 +4,7 @@ import edu.icet.controller.DashBoardController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -65,8 +66,8 @@ public class LoginUIController {
         }
 
         // ===== Login Success =====
-        txtInvalidEmail.setText("");
-        txtInvalidPassword.setText("");
+//        txtInvalidEmail.setText("");
+//        txtInvalidPassword.setText("");
         System.out.println("Login Successful!");
 
         openDashboard(email);
@@ -112,5 +113,19 @@ public class LoginUIController {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void openRegister(ActionEvent actionEvent) {
+
+        try {
+           Parent root = FXMLLoader.load(getClass().getResource("/view/register.fxml"));
+            Stage stage = (Stage) txtEmail.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Register");
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }

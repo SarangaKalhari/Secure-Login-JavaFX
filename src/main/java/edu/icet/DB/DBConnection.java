@@ -1,4 +1,4 @@
-package edu.icet.controller.DB;
+package edu.icet.DB;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
