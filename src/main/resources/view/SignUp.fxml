@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="572.0" prefWidth="449.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.SignUP.SignUpUIController">
    <children>
       <Label layoutX="149.0" layoutY="51.0" prefHeight="46.0" prefWidth="148.0" text="Registration">
@@ -17,10 +16,12 @@
       <TextField fx:id="txtFirstName" layoutX="70.0" layoutY="119.0" prefHeight="35.0" prefWidth="284.0" promptText="First Name" />
       <TextField fx:id="txtLastName" layoutX="70.0" layoutY="174.0" prefHeight="35.0" prefWidth="284.0" promptText="Last Name" />
       <TextField fx:id="txtEmail" layoutX="70.0" layoutY="239.0" prefHeight="35.0" prefWidth="284.0" promptText="Email Address" />
-      <TextField fx:id="txtReEnterPassword" layoutX="70.0" layoutY="354.0" prefHeight="35.0" prefWidth="284.0" promptText="Re-enter Password" />
+      <TextField fx:id="txtReEnterPassword" layoutX="70.0" layoutY="371.0" prefHeight="35.0" prefWidth="284.0" promptText="Re-enter Password" />
       <Button layoutX="152.0" layoutY="433.0" mnemonicParsing="false" onAction="#btnSignUpOnAction" prefHeight="35.0" prefWidth="100.0" text="Sign-Up" />
       <Button layoutX="152.0" layoutY="498.0" mnemonicParsing="false" onAction="#loginOnAction" prefHeight="22.0" prefWidth="100.0" text="Back to Login" />
       <TextField fx:id="txtPassword" layoutX="70.0" layoutY="300.0" prefHeight="35.0" prefWidth="284.0" promptText="Password" />
       <Label fx:id="lblPassword" layoutX="73.0" layoutY="398.0" prefHeight="18.0" prefWidth="158.0" />
+      <Label fx:id="lblEmail" layoutX="73.0" layoutY="278.0" prefHeight="18.0" prefWidth="148.0" />
+      <Label fx:id="lblPassword" layoutX="70.0" layoutY="342.0" prefHeight="18.0" prefWidth="148.0" />
    </children>
 </AnchorPane>
