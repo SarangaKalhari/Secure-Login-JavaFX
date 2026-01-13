@@ -15,6 +15,15 @@ public class LoginUIController {
     @FXML
     void btnLoginOnAction(ActionEvent event) {
 
+        String email = txtEmail.getText().trim();
+        String password = txtPassword.getText().trim();
+
+        if (isValidEmail(email)){
+            System.out.println("Valid email Address..");
+        }else {
+            System.out.println("Invalid ..");
+        }
+
     }
 
     @FXML
@@ -22,4 +31,8 @@ public class LoginUIController {
 
     }
 
+    private boolean isValidEmail(String email){
+        String isGmail = "^[a-zA-Z0-9]+@gmail\\.com$";
+        return email.matches(isGmail);
+    }
 }
