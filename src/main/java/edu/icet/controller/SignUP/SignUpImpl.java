@@ -1,6 +1,6 @@
 package edu.icet.controller.SignUP;
 
-import edu.icet.controller.DB.DBConnection;
+import edu.icet.DB.DBConnection;
 import edu.icet.model.dto.UserDTO;
 
 import java.sql.*;
@@ -10,7 +10,8 @@ public class SignUpImpl implements SignUpService {
     @Override
     public int addRegister(UserDTO dto) {
         int generatedId = -1;
-        String sql = "INSERT INTO register (first_name, last_name, email, password) VALUES (?, ?, ?, ?)";
+        String sql ="INSERT INTO register (first_name, last_name, email, password) VALUES (?, ?, ?, SHA2(?,256))";
+
 
         try (Connection connection = DBConnection.getInstance().getConnection();
              PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
