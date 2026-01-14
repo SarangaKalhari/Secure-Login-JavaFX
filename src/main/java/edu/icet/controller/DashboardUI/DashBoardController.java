@@ -1,10 +1,12 @@
-package edu.icet.controller;
+package edu.icet.controller.DashboardUI;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 public class DashBoardController {
+
+    private  final DashboardImpl dashboard = new DashboardImpl();
 
     @FXML
     private Label lblEmail;
@@ -17,6 +19,6 @@ public class DashBoardController {
     }
 
     public void setUserEmail(String email) {
-        lblEmail.setText(email);
+        lblEmail.setText(dashboard.validUser(email));
     }
 }

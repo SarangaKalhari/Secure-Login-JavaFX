@@ -1,6 +1,6 @@
 package edu.icet.controller.LoginUI;
 
-import edu.icet.controller.DashBoardController;
+import edu.icet.controller.DashboardUI.DashBoardController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -66,8 +66,8 @@ public class LoginUIController {
         }
 
         // ===== Login Success =====
-//        txtInvalidEmail.setText("");
-//        txtInvalidPassword.setText("");
+        txtInvalidEmail.setText("");
+        txtInvalidPassword.setText("");
         System.out.println("Login Successful!");
 
         openDashboard(email);

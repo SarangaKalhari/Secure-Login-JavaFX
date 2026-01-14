@@ -10,7 +10,7 @@ public class SignUpImpl implements SignUpService {
     @Override
     public int addRegister(UserDTO dto) {
         int generatedId = -1;
-        String sql = "INSERT INTO register (first_name, last_name, email, password) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO register (first_name, last_name, email, password) VALUES (?, ?, ?, SHA2(?, 256))";
 
         try {
             Connection connection = DBConnection.getInstance().getConnection(); // singleton connection

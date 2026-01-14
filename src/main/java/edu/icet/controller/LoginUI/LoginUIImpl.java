@@ -16,7 +16,7 @@ public class LoginUIImpl implements LoginUIService {
     @Override
     public boolean isUserRegistered(String email, String password) {
 
-        String sql = "SELECT id FROM register WHERE email = ? AND password = SHA2(?,256)";
+        String sql = "SELECT id FROM user WHERE email = ? AND password = ?";
 
 
         try {
