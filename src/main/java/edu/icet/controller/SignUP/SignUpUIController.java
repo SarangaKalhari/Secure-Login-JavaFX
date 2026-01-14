@@ -1,5 +1,6 @@
 package edu.icet.controller.SignUP;
 
+import edu.icet.model.dto.Login;
 import edu.icet.model.dto.UserDTO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,7 +14,7 @@ import java.io.IOException;
 
 public class SignUpUIController {
 
-    private final SignUpImpl sign = new SignUpImpl();
+    SignUpImpl sign = new SignUpImpl();
     Stage stage = new Stage();
 
     @FXML
@@ -58,6 +59,9 @@ public class SignUpUIController {
 
         UserDTO user = new UserDTO(fname, lname, email, password);
         int generatedId = sign.addRegister(user);
+
+        Login login = new Login(email,password);
+        sign.addEmailPassword(login);
 
         if (generatedId != -1) {
             lblPassword.setText("User registered successfully! ID: " + generatedId);

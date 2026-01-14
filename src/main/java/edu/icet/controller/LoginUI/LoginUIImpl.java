@@ -1,12 +1,17 @@
 package edu.icet.controller.LoginUI;
 
 import edu.icet.DB.DBConnection;
+
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+
 public class LoginUIImpl implements LoginUIService {
+
+
 
     @Override
     public boolean isUserRegistered(String email, String password) {
