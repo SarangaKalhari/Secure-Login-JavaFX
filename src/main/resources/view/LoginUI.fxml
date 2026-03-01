@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500" prefWidth="450"
+            style="-fx-background-color: linear-gradient(to bottom right,#89a7d6,#586985);"
+            xmlns="http://javafx.com/javafx/24.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="edu.icet.controller.LoginUI.LoginUIController">
+
+    <!-- Login Card -->
+    <Pane layoutX="50" layoutY="60" prefHeight="360" prefWidth="350"
+          style="-fx-background-color: rgba(255,255,255,0.95);
+                 -fx-background-radius: 25;
+                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 20,0,0,5);
+                 -fx-padding:30;">
+
+        <!-- Title -->
+        <Label layoutX="140" layoutY="20"
+               text="Login"
+               style="-fx-font-size:28px;
+                      -fx-font-weight:bold;
+                      -fx-text-fill:#0f172a;"/>
+
+        <!-- Email -->
+        <TextField fx:id="txtEmail"
+                   layoutX="45" layoutY="80"
+                   prefWidth="260"
+                   promptText="Enter Gmail"
+                   style="-fx-background-radius:15;
+                          -fx-padding:12;
+                          -fx-border-radius:15;
+                          -fx-border-color:#e2e8f0;"/>
+
+        <Label fx:id="txtInvalidEmail"
+               layoutX="45" layoutY="120"
+               style="-fx-text-fill:#ef4444;
+                      -fx-font-size:12px;"/>
+
+        <!-- Password -->
+        <PasswordField fx:id="txtPassword"
+                       layoutX="45" layoutY="150"
+                       prefWidth="260"
+                       promptText="Enter Password"
+                       style="-fx-background-radius:15;
+                              -fx-padding:12;
+                              -fx-border-radius:15;
+                              -fx-border-color:#e2e8f0;"/>
+
+        <Label fx:id="txtInvalidPassword"
+               layoutX="45" layoutY="190"
+               style="-fx-text-fill:#ef4444;
+                      -fx-font-size:12px;"/>
+
+        <!-- Login Button -->
+        <Button layoutX="45" layoutY="230"
+                prefWidth="260"
+                text="Login"
+                onAction="#btnLoginOnAction"
+                style="-fx-background-color: linear-gradient(to right,#56dbc3,#1e40af);
+                       -fx-text-fill:white;
+                       -fx-font-weight:bold;
+                       -fx-background-radius:15;
+                       -fx-padding:12;
+                       -fx-cursor:hand;"/>
+
+        <!-- Signup -->
+        <Hyperlink layoutX="115" layoutY="300"
+                   text="Create new account"
+                   onAction="#btnSignUpOnAction"
+                   style="-fx-text-fill:#2563eb;
+                          -fx-font-weight:bold;"/>
+
+    </Pane>
+
+</AnchorPane>

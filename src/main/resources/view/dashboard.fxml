@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600" prefWidth="900"
+            style="-fx-background-color: linear-gradient(to bottom right,#0f172a,#1e293b);"
+            xmlns="http://javafx.com/javafx/24.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="edu.icet.controller.DashboardUI.DashBoardController">
+
+    <!-- ===== Top Header ===== -->
+    <Pane prefHeight="65" prefWidth="900"
+          style="-fx-background-color: rgba(255,255,255,0.08);
+                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 15,0,0,3);">
+
+        <Label layoutX="25" layoutY="18"
+               text="SaaS Dashboard"
+               style="-fx-text-fill:white;
+                      -fx-font-size:22px;
+                      -fx-font-weight:bold;"/>
+
+        <Button layoutX="820" layoutY="15"
+                prefWidth="65"
+                text="Logout"
+                onAction="#handleLogout"
+                style="-fx-background-color:#ef4444;
+                       -fx-text-fill:white;
+                       -fx-background-radius:18;
+                       -fx-font-weight:bold;
+                       -fx-cursor:hand;"/>
+    </Pane>
+
+    <!-- ===== Sidebar ===== -->
+    <Pane layoutY="65" prefWidth="220" prefHeight="535"
+          style="-fx-background-color: rgba(15,23,42,0.95);
+                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 20,0,3,0);">
+
+        <Label layoutX="65" layoutY="25"
+               text="MENU"
+               style="-fx-text-fill:#94a3b8;
+                      -fx-font-size:15px;
+                      -fx-font-weight:bold;"/>
+
+        <Button layoutX="20" layoutY="80" prefWidth="180"
+                text="Dashboard" onAction="#dashBoardOnAction"
+                style="-fx-background-color:transparent;
+                       -fx-text-fill:white;
+                       -fx-border-color:#334155;
+                       -fx-border-radius:12;
+                       -fx-background-radius:12;
+                       -fx-cursor:hand;"/>
+
+        <Button layoutX="20" layoutY="130" prefWidth="180"
+                text="Users"
+                style="-fx-background-color:transparent;
+                       -fx-text-fill:white;
+                       -fx-border-color:#334155;
+                       -fx-border-radius:12;
+                       -fx-background-radius:12;
+                       -fx-cursor:hand;"/>
+
+        <Button layoutX="20" layoutY="180" prefWidth="180"
+                text="Settings"
+                style="-fx-background-color:transparent;
+                       -fx-text-fill:white;
+                       -fx-border-color:#334155;
+                       -fx-border-radius:12;
+                       -fx-background-radius:12;
+                       -fx-cursor:hand;"/>
+
+    </Pane>
+
+    <!-- ===== Main Content ===== -->
+    <Pane layoutX="230" layoutY="75" prefWidth="650" prefHeight="500"
+          style="-fx-background-color: rgba(255,255,255,0.95);
+                 -fx-background-radius:25;
+                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 25,0,0,5);
+                 -fx-padding:30;">
+
+        <Label layoutX="30" layoutY="20"
+               text="Welcome Back 🎯"
+               style="-fx-font-size:32px;
+                      -fx-font-weight:bold;
+                      -fx-text-fill:#0f172a;"/>
+
+        <Label layoutX="30" layoutY="70"
+               text="System Overview"
+               style="-fx-text-fill:#64748b;
+                      -fx-font-size:16px;"/>
+
+        <Label fx:id="lblEmail"
+               layoutX="30" layoutY="120"
+               textFill="#22c55e">
+            <font>
+                <Font name="System Bold" size="22"/>
+            </font>
+        </Label>
+
+        <!-- Example Stats Cards -->
+        <Pane layoutX="30" layoutY="180" prefWidth="250" prefHeight="120"
+              style="-fx-background-color: linear-gradient(to right,#3b82f6,#1e40af);
+                     -fx-background-radius:18;
+                     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 15,0,0,4);">
+
+            <Label layoutX="20" layoutY="30"
+                   text="Total Users"
+                   style="-fx-text-fill:white;
+                          -fx-font-size:16px;"/>
+
+            <Label layoutX="20" layoutY="60"
+                   text="124"
+                   style="-fx-text-fill:white;
+                          -fx-font-size:28px;
+                          -fx-font-weight:bold;"/>
+        </Pane>
+
+    </Pane>
+
+</AnchorPane>
