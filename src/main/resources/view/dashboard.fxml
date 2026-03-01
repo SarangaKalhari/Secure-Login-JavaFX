@@ -44,7 +44,7 @@
                       -fx-font-weight:bold;"/>
 
         <Button layoutX="20" layoutY="80" prefWidth="180"
-                text="Dashboard"
+                text="Dashboard" onAction="#dashBoardOnAction"
                 style="-fx-background-color:transparent;
                        -fx-text-fill:white;
                        -fx-border-color:#334155;

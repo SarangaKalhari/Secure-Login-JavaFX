@@ -73,7 +73,7 @@ public class LoginUIController {
         openDashboard(email);
     }
 
-    private void openDashboard(String email) {
+    public void openDashboard(String email) {
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/dashboard.fxml"));
